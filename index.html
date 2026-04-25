@@ -16,10 +16,12 @@
 
     :root {
       --bg-primary:   #ffffff;
-      --bg-secondary: #f7f7f7;
+      --bg-secondary: #FCD7DA;
       --text-primary: #0a0a0a;
       --text-muted:   #6b6b6b;
       --border:       #e0e0e0;
+      --accent-soft:  #FCD7DA;
+      --accent:       #F7819E;
     }
 
     html { scroll-behavior: smooth; }
@@ -83,7 +85,7 @@
     }
 
     .nav-links a.active {
-      color: var(--text-primary);
+      color: var(--accent);
     }
 
     /* ── HERO ── */
@@ -130,8 +132,8 @@
 
     .hero-divider {
       width: 40px;
-      height: 1px;
-      background: var(--border);
+      height: 2px;
+      background: var(--accent);
       margin: 2.5rem auto;
     }
 
@@ -182,7 +184,8 @@
     }
 
     .info-item-value:hover {
-      border-bottom-color: var(--text-primary);
+      color: var(--accent);
+      border-bottom-color: var(--accent);
     }
 
     /* ── PROFILE ── */
@@ -199,8 +202,8 @@
 
     .profile-image-wrap {
       aspect-ratio: 3 / 4;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-soft);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -219,7 +222,7 @@
       font-weight: 900;
       font-size: clamp(3rem, 8vw, 6rem);
       letter-spacing: -0.04em;
-      color: var(--border);
+      color: var(--accent);
       text-transform: uppercase;
       user-select: none;
     }
@@ -323,8 +326,7 @@
 
     <section class="profile">
       <div class="profile-image-wrap">
-        <!-- Ganti dengan: <img src="foto.jpg" alt="Muhamad Ramdhani Akbar"> -->
-        <span class="profile-avatar-fallback">MRA</span>
+        <img src="img/ramdhaniakbar.jpg" alt="Muhamad Ramdhani Akbar">
       </div>
       <div class="profile-content">
         <p class="profile-label">Profile</p>
