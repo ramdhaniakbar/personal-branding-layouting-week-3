@@ -184,6 +184,121 @@
     .info-item-value:hover {
       border-bottom-color: var(--text-primary);
     }
+
+    /* ── PROFILE ── */
+    .profile {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .profile-image-wrap {
+      aspect-ratio: 3 / 4;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .profile-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile-avatar-fallback {
+      font-family: "Inter", sans-serif;
+      font-weight: 900;
+      font-size: clamp(3rem, 8vw, 6rem);
+      letter-spacing: -0.04em;
+      color: var(--border);
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    .profile-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .profile-label {
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .profile-name {
+      font-family: "Inter", sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--text-primary);
+      text-transform: uppercase;
+    }
+
+    .profile-bio {
+      font-family: "DM Sans", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      line-height: 1.75;
+      max-width: 420px;
+    }
+
+    .profile-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .profile-meta-row {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .profile-meta-label {
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 80px;
+    }
+
+    .profile-meta-value {
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 720px) {
+      .profile {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .profile-image-wrap {
+        aspect-ratio: 1 / 1;
+        max-width: 280px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -199,12 +314,37 @@
   </header>
 
   <main>
-
     <section class="hero" id="home">
       <p class="hero-greeting">Halo, selamat datang</p>
       <h1 class="hero-name">Muhamad<br>Ramdhani<br>Akbar</h1>
       <div class="hero-divider"></div>
       <p class="hero-tagline">Mahasiswa & enthusiast teknologi yang sedang membangun sesuatu yang bermakna.</p>
+    </section>
+
+    <section class="profile">
+      <div class="profile-image-wrap">
+        <!-- Ganti dengan: <img src="foto.jpg" alt="Muhamad Ramdhani Akbar"> -->
+        <span class="profile-avatar-fallback">MRA</span>
+      </div>
+      <div class="profile-content">
+        <p class="profile-label">Profile</p>
+        <h2 class="profile-name">Muhamad<br>Ramdhani<br>Akbar</h2>
+        <p class="profile-bio">Mahasiswa aktif yang tertarik pada dunia teknologi, desain, dan pengembangan perangkat lunak. Selalu bersemangat untuk belajar dan menciptakan sesuatu yang berdampak.</p>
+        <div class="profile-meta">
+          <div class="profile-meta-row">
+            <span class="profile-meta-label">Status</span>
+            <span class="profile-meta-value">Mahasiswa Aktif</span>
+          </div>
+          <div class="profile-meta-row">
+            <span class="profile-meta-label">Lokasi</span>
+            <span class="profile-meta-value">Indonesia</span>
+          </div>
+          <div class="profile-meta-row">
+            <span class="profile-meta-label">Profesi</span>
+            <span class="profile-meta-value">Software Engineer, UI/UX, AI Native Engineer</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="info" id="about">
