@@ -1,56 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ini adalah pertemuan 3</title>
+  <title>Muhamad Ramdhani Akbar — Personal Profile</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-primary:   #f5f5f5;
+      --accent:       #7c3aed;
+      --text-primary: #111111;
+      --text-muted:   #6b7280;
+    }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      background-color: #1E1E1E;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: "Red Hat Text", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
     }
 
-    .noto-sans-reguler {
-      font-family: "Noto Sans", sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
+    /* ── NAV ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0.75rem 2rem;
     }
 
-
-    .title {
-      font-size: 48px;
-      font-weight: bold;
-      color: pink;
-    }
-
-    .sub-title {
-      color: salmon;
-    }
-
-    #akbar {
-      color: red;
-    }
-
-    .contacts {
+    nav {
+      max-width: 720px;
+      margin: 0 auto;
+      height: 52px;
+      padding: 0 1.5rem;
       display: flex;
       align-items: center;
-      color: blue;
+      justify-content: space-between;
+
+      /* glass effect */
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+
+    .nav-brand {
+      font-family: "Noto Sans", sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 0.45rem 1rem;
+      border-radius: 10px;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links a.active {
+      color: var(--accent);
+      background: rgba(124, 58, 237, 0.1);
     }
   </style>
 </head>
 <body>
-  <h1 class="noto-sans-reguler title">Halo nama saya Muhamad Ramdhani <span id="akbar">Akbar</span></h1>
 
-  <p class="sub-title">Ini adalah website saya, selamat datang!</p>
+  <header>
+    <nav>
+      <a href="#home" class="nav-brand">MRA.</a>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="contacts">
-    <p>Ini kontak instagram saya</p>
-    <span>
-      <a href="https://www.instagram.com/rmdhni.akbarr" target="_blank">Instagram</a>
-    </span>
-  </div>
+  <main>
+    <!-- sections coming soon -->
+  </main>
 
 </body>
 </html>
