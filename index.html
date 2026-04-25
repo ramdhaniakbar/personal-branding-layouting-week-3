@@ -85,6 +85,105 @@
     .nav-links a.active {
       color: var(--text-primary);
     }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: calc(100vh - 60px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-greeting {
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .hero-name {
+      font-family: "Inter", sans-serif;
+      font-weight: 900;
+      font-size: clamp(3.5rem, 10vw, 8.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-tagline {
+      font-family: "DM Sans", sans-serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 400;
+      color: var(--text-muted);
+      max-width: 480px;
+      line-height: 1.6;
+    }
+
+    .hero-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--border);
+      margin: 2.5rem auto;
+    }
+
+    /* ── INFO / CONTACT ── */
+    .info {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-header {
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2.5rem 3rem;
+    }
+
+    .info-item-label {
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-item-value {
+      font-family: "Inter", sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      display: inline-block;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .info-item-value:hover {
+      border-bottom-color: var(--text-primary);
+    }
   </style>
 </head>
 <body>
@@ -100,7 +199,41 @@
   </header>
 
   <main>
-    <!-- sections coming soon -->
+
+    <section class="hero" id="home">
+      <p class="hero-greeting">Halo, selamat datang</p>
+      <h1 class="hero-name">Muhamad<br>Ramdhani<br>Akbar</h1>
+      <div class="hero-divider"></div>
+      <p class="hero-tagline">Mahasiswa & enthusiast teknologi yang sedang membangun sesuatu yang bermakna.</p>
+    </section>
+
+    <section class="info" id="about">
+      <p class="info-header">Kontak & Sosial Media</p>
+      <div class="info-grid">
+
+        <div>
+          <p class="info-item-label">Email</p>
+          <a class="info-item-value" href="mailto:ramdhaniakbarmuhamad@gmail.com">ramdhaniakbarmuhamad@gmail.com</a>
+        </div>
+
+        <div>
+          <p class="info-item-label">Instagram</p>
+          <a class="info-item-value" href="https://instagram.com/rmdhni.akbarr" target="_blank" rel="noopener">@rmdhni.akbarr</a>
+        </div>
+
+        <div>
+          <p class="info-item-label">LinkedIn</p>
+          <a class="info-item-value" href="https://linkedin.com/in/ramdhaniakbar" target="_blank" rel="noopener">Muhamad Ramdhani Akbar</a>
+        </div>
+
+        <div>
+          <p class="info-item-label">GitHub</p>
+          <a class="info-item-value" href="https://github.com/ramdhaniakbar" target="_blank" rel="noopener">ramdhaniakbar</a>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
 </body>
